@@ -23,10 +23,8 @@ class ConferenceController extends AbstractController {
     /**
      * @Route("/", name="homepage")
      */
-    public function index(ConferenceRepository $conferenceRepository) {
-        return new Response($this->twig->render('conference/index.html.twig', [
-            'conferences' => $conferenceRepository->findAll(),
-        ]));
+    public function index() {
+        return new Response($this->twig->render('conference/index.html.twig', []));
     }
 
 
